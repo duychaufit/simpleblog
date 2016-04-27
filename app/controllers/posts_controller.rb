@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
+  # get all posts
   # GET /posts
   # GET /posts.json
   def index
@@ -22,7 +23,6 @@ class PostsController < ApplicationController
   end
 
   # POST /posts
-  # POST /posts.json
   # POST /posts.json
   def create
     @post = Post.new(post_params)
