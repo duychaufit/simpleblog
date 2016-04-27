@@ -23,6 +23,7 @@ class PostsController < ApplicationController
 
   # POST /posts
   # POST /posts.json
+  # POST /posts.json
   def create
     @post = Post.new(post_params)
 
