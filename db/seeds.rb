@@ -8,11 +8,8 @@
 
 Category.delete_all
 Post.delete_all
-Category.delete_all
 
-Category.create(:id => 1, :name => 'Kinh te')
-Category.create(:id => 1, :name => 'Chinh tri')
-Category.create(:id => 1, :name => 'The thao')
-Category.create(:id => 1, :name => 'Giao duc')
-
-Category.create(:id => 1, :title => 'Kinh te')
+Category.create(:id => 1, :text => 'Kinh te')
+Category.create(:id => 2, :text => 'Chinh tri')
+Category.create(:id => 3, :text => 'The thao')
+Category.create(:id => 4, :text => 'Giao duc')

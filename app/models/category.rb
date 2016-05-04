@@ -1,4 +1,5 @@
-class CreateCategories < ActiveRecord::Migration
+class Category < ActiveRecord::Base
+  
   def change
     create_table :categories do |t|
       t.string :name, null: false

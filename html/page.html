@@ -1,12 +1,14 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Simpleblog</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+<title>SimpleScheme Magazine - Demo Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<!--[if lte IE 6]><link rel="stylesheet" type="text/css" href="ie.css" /><![endif]-->
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.all.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 </head>
-
 <body>
 <!-- BEGIN wrapper -->
 <div id="wrapper">
@@ -32,7 +34,7 @@
     </div>
     <!-- end logo -->
     <!-- begin sponsor -->
-    <div class="sponsor"> <a href="http://all-free-download.com/free-website-templates/"><img src="<%= image_path("ad468x60.gif") %>" /></a> </div>
+    <div class="sponsor"> <a href="http://all-free-download.com/free-website-templates/"><img src="images/ad468x60.gif" alt="" /></a> </div>
     <!-- end sponsor -->
     <!-- begin categories -->
     <ul class="categories">
@@ -50,14 +52,49 @@
   <!-- END header -->
   <!-- BEGIN content -->
   <div id="content">
-    <%= yield %>
+    <!-- begin recent posts -->
+    <div class="recent">
+      <!-- begin post -->
+      <div class="single">
+        <h2>Sample Page</h2>
+        <p>Ristiedonec nisl tellus pellus vel lobortor cursus quis semper sapibus curabitudin. Massacondimentum amet intesque ullamcorper facilis congue dolor amet ligula justo non.</p>
+        <p><img class="alignright" src="images/200x150.gif" width="200" height="150" alt="" /></p>
+        <p>Consequeet tor massa et tellentesque nasce et laorem mauristiquam mus sed. Odiopartur quisque nisl pellus dictus auctor ant quis odio nam sed.</p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur quam augue, vehicula quis, tincidunt vel, varius vitae, nulla. Sed convallis orci. Duis libero orci, pretium a, <a href="http://all-free-download.com/free-website-templates/">convallis quis</a>, pellentesque a, dolor. Curabitur vitae nisi non dolor vestibulum consequat.</p>
+        <p>Aliquatpretium antesque accumst euismod nunc vitae cras interdum sed donec ipsum. Integetnunc cumst vel gravida sit accumst lobortor congue accumst estas et. Laciliswisi cursus sed sociis curabitur intesque orci phasellus purus estibulum sagittis. Nuncut congue consequat ligula consecteturpis et ipsum sed id id augue. Curabitaesit orci laoreet libero vestas sit faucibus iacus curabitudin vestas tellus.</p>
+        <blockquote>
+          <p>Proin vestibulum. Ut ligula. Nullam sed dolor id odio volutpat pulvinar. Integer a leo. In et eros at neque pretium sagittis. Sed sodales lorem a ipsum suscipit gravida. Ut fringilla placerat arcu. Phasellus imperdiet. Mauris ac justo et turpis pharetra vulputate.</p>
+        </blockquote>
+        <p><cite><a href="http://all-free-download.com/free-website-templates/">Quote Source</a></cite></p>
+        <p>Inquisquet urna proin vel volutpat velit tellus vivamus nas nam ac. Atauctortor ligula nulla volutpat laorem a sed curabitur et congue enim. Faciniacurabitudin estibulum montesque consequam sent phasellentesque feugiat tristibulum et curabitur aliquat. Vestpartur ligula urna eu curabitae egestassa nibh elit.</p>
+        <h3>An Ordered List</h3>
+        <ol>
+          <li>Vestibulum in mauris semper tortor interdum ultrices.</li>
+          <li>Sed vel lorem et justo laoreet bibendum. Donec dictum.</li>
+          <li>Etiam massa libero, lacinia at, commodo in, tincidunt a, purus.</li>
+          <li>Praesent volutpat eros quis enim blandit tincidunt.</li>
+          <li>Aenean eu libero nec lectus ultricies laoreet. Donec rutrum, nisi vel egestas ultrices, ipsum urna sagittis libero, vitae vestibulum dui dolor vel velit.</li>
+        </ol>
+        <p>Inquisquet urna proin vel volutpat velit tellus vivamus nas nam ac. Atauctortor ligula nulla volutpat laorem a sed curabitur et congue enim. Faciniacurabitudin estibulum montesque consequam sent phasellentesque feugiat tristibulum et curabitur aliquat. Vestpartur ligula urna eu curabitae egestassa nibh elit.</p>
+        <h3>An Unordered List</h3>
+        <ul>
+          <li>Vestibulum in mauris semper tortor interdum ultrices.</li>
+          <li>Sed vel lorem et justo laoreet bibendum. Donec dictum.</li>
+          <li>Etiam massa libero, lacinia at, commodo in, tincidunt a, purus.</li>
+          <li>Praesent volutpat eros quis enim blandit tincidunt.</li>
+          <li>Aenean eu libero nec lectus ultricies laoreet. Donec rutrum, nisi vel egestas ultrices, ipsum urna sagittis libero, vitae vestibulum dui dolor vel velit.</li>
+        </ul>
+      </div>
+      <!-- end post -->
+    </div>
+    <!-- end recent posts -->
   </div>
   <!-- END content -->
   <!-- BEGIN sidebar -->
   <div id="sidebar">
     <!-- begin sponsors -->
     <div class="box">
-      <p class="sponsors"> <a href="http://all-free-download.com/free-website-templates/"><img src="<%= image_path("ad125x125.jpg") %>" /></a> <a href="http://all-free-download.com/free-website-templates/"><img src="<%= image_path("ad125x125.jpg") %>" /></a> </p>
+      <p class="sponsors"> <a href="http://all-free-download.com/free-website-templates/"><img src="images/ad125x125.jpg" alt="" /></a> <a href="http://all-free-download.com/free-website-templates/"><img src="images/ad125x125.jpg" alt="" /></a> </p>
       <ul class="bookmarks">
         <li class="rss"><a href="http://all-free-download.com/free-website-templates/">Subscribe via RSS feed</a></li>
         <li class="twt"><a href="http://all-free-download.com/free-website-templates/">Follow me on Twitter</a></li>
@@ -85,13 +122,13 @@
     <!-- begin flickr images -->
     <div class="box">
       <h2>Flickr Images</h2>
-      <div class="flickr"> <a href="http://all-free-download.com/free-website-templates/"><img src="<%= image_path("_flickr.jpg") %>" /></a> <a href="http://all-free-download.com/free-website-templates/"><img src="<%= image_path("_flickr.jpg") %>" /></a> <a href="http://all-free-download.com/free-website-templates/"><img src="<%= image_path("_flickr.jpg") %>" /></a> <a href="http://all-free-download.com/free-website-templates/"><img src="<%= image_path("_flickr.jpg") %>" /></a> <a href="http://all-free-download.com/free-website-templates/"><img src="<%= image_path("_flickr.jpg") %>" /></a> <a href="http://all-free-download.com/free-website-templates/"><img src="<%= image_path("_flickr.jpg") %>" /></a> </div>
+      <div class="flickr"> <a href="http://all-free-download.com/free-website-templates/"><img src="images/_flickr.jpg" alt="" /></a> <a href="http://all-free-download.com/free-website-templates/"><img src="images/_flickr.jpg" alt="" /></a> <a href="http://all-free-download.com/free-website-templates/"><img src="images/_flickr.jpg" alt="" /></a> <a href="http://all-free-download.com/free-website-templates/"><img src="images/_flickr.jpg" alt="" /></a> <a href="http://all-free-download.com/free-website-templates/"><img src="images/_flickr.jpg" alt="" /></a> <a href="http://all-free-download.com/free-website-templates/"><img src="images/_flickr.jpg" alt="" /></a> </div>
     </div>
     <!-- end flickr images -->
     <!-- begin featured video -->
     <div class="box">
       <h2>Featured Video</h2>
-      <div class="video"> <img src="<%= image_path("_video.jpg") %>" /> </div>
+      <div class="video"> <img src="images/_video.jpg" alt="" /> </div>
     </div>
     <!-- end featured video -->
     <!-- begin tag cloud -->

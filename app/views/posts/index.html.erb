@@ -1,7 +1,15 @@
-<h1>Welcome to My simple blog</h1>
-<% @posts.each do |post| %>
-  <h2><%= link_to post.title, post %></h2>
-  <p><%= time_ago_in_words post.created_at %> ago</p>
-  <p><%= post.text %></p>
-<% end %>
-<%= link_to "New post", new_post_path %>
+<!-- begin recent posts -->
+    <div class="recent">
+      <% @posts.each do |post| %>
+      <!-- begin post -->
+      <div class="o post"> <a href="http://all-free-download.com/free-website-templates/"><img src="images/_thumb.jpg" alt="" /></a>
+        
+        <h2><%= link_to post.title, post %></h2>
+        <p>Ut vel orci quis sem dapibus iaculis. Aliquam ut nunc quis nisi tincidunt tincidunt. Pellentesque enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque enim. Misl blandit feugiat. Ut vel orci quis sem dapibus iaculis.</p>
+        <p class="readmore">[ <a href="http://all-free-download.com/free-website-templates/">read more</a> ]</p>
+        <div class="break"></div>
+      </div>
+      <!-- end post -->
+      <% end %>
+    </div>
+    <!-- end recent posts -->

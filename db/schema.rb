@@ -14,23 +14,31 @@
 ActiveRecord::Schema.define(version: 20160326153108) do
 
   create_table "categories", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.text     "text",       limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "comments", force: :cascade do |t|
-    t.integer  "post_id",    limit: 4
+    t.integer  "post_id",    limit: 4,     null: false
     t.text     "text",       limit: 65535
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end
+
+  add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
 
   create_table "posts", force: :cascade do |t|
-    t.text     "title",      limit: 65535
-    t.text     "text",       limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.text     "title",       limit: 65535
+    t.text     "text",        limit: 65535
+    t.integer  "category_id", limit: 4,                     null: false
+    t.boolean  "del_flg",                   default: false
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
   end
 
+  add_index "posts", ["category_id"], name: "index_posts_on_category_id", using: :btree
+
+  add_foreign_key "comments", "posts"
+  add_foreign_key "posts", "categories"
 end
