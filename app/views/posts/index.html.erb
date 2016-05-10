@@ -1,12 +1,22 @@
 <!-- begin recent posts -->
     <div class="recent">
+      <% i = 0 %>
       <% @posts.each do |post| %>
+      
       <!-- begin post -->
-      <div class="o post"> <a href="http://all-free-download.com/free-website-templates/"><img src="images/_thumb.jpg" alt="" /></a>
+      	<% i+=1 %>
+      	 <% cls = 'o' %>
+      	<% if i%2==0 %>
+      	<% cls = 'e'%>
+      	<% end %>
+      <div class="<%= cls %> post"> <a href="http://all-free-download.com/free-website-templates/">
+      	<img src="<%= image_path("_thumb.jpg") %>" />
+      	</a>
+      	
         
         <h2><%= link_to post.title, post %></h2>
-        <p>Ut vel orci quis sem dapibus iaculis. Aliquam ut nunc quis nisi tincidunt tincidunt. Pellentesque enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque enim. Misl blandit feugiat. Ut vel orci quis sem dapibus iaculis.</p>
-        <p class="readmore">[ <a href="http://all-free-download.com/free-website-templates/">read more</a> ]</p>
+        <p><%= post.text.first(100) %></p>
+        <p class="readmore">[ <%= link_to 'read more', post %> ]</p>
         <div class="break"></div>
       </div>
       <!-- end post -->
